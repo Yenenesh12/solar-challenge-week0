@@ -106,23 +106,28 @@ streamlit run app/main.py
 | Cross-Country Comparison | ✅      | Completed                           |
 | Streamlit Dashboard      | ⏳      | Interactive visualizations deployed |
 
-###  Key Takeaways
-Data quality is essential: Proper cleaning and validation improved analysis accuracy
+### 🔑 Key Takeaways
 
-Visualization clarifies patterns: Trends and anomalies became immediately visible
+- **Data quality is essential:** Proper cleaning and validation significantly improved analysis accuracy.
+- **Visualization clarifies patterns:** Trends and anomalies became immediately visible through clear plots.
+- **Automation improves reproducibility:** A structured workflow and CI/CD pipelines enhanced consistency.
+- **Collaboration benefits:** Git branching strategies allowed parallel work without conflicts and easier reviews.
 
-Automation improves reproducibility: Structured workflow and CI/CD pipelines enhanced consistency
+---
 
-Collaboration benefits: Git branching strategies allowed parallel work without conflicts
+### 🧭 Conclusion
 
-### Conclusion
-Week 0 laid the groundwork for the Solar Challenge by providing cleaned datasets, actionable insights on solar energy potential, and a functional interactive dashboard. This work establishes a solid foundation for future predictive modeling and optimization tasks.
+Week 0 laid the groundwork for the Solar Challenge by delivering **cleaned datasets**, **actionable insights** on solar energy potential, and a **functional interactive dashboard**.
+This foundation supports future work in **predictive modeling** and **optimization** for solar energy planning.
 
-### Tools & References
-Python 3.12, Pandas, NumPy, Matplotlib, Seaborn
+---
 
-Streamlit for interactive dashboards
+### 🛠️ Tools & References
 
-GitHub Actions for CI/CD workflow
+- **Python 3.12**, **Pandas**, **NumPy**, **Matplotlib**, **Seaborn**
+- **Streamlit** — for interactive dashboards
+- **GitHub Actions** — for CI/CD workflow automation
 
-Made with  by Yenenesh Dabot
+---
+
+Made with ❤️ by **Yenenesh Dabot**
