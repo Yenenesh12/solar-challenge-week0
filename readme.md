@@ -1,66 +1,127 @@
-🌞 Solar Challenge Week 0
-📘 Project Overview
-This project focuses on analyzing solar farm data from Benin, Sierra Leone, and Togo to extract meaningful insights and identify high-potential regions for solar energy installation. It is part of the 10 Academy Week 0 Challenge, designed to assess candidates’ skills in Data Engineering, Financial Analytics, and Machine Learning Engineering.
+# 🌞 Solar Challenge Week 0 — Final Report
 
-🧠 Objectives
-Perform data cleaning, profiling, and exploratory data analysis (EDA).
+*By Yenenesh Dabot*
 
-Understand environmental and solar measurement patterns (GHI, DNI, DHI, temperature, humidity, wind, etc.).
+---
 
-Derive data-driven insights that support sustainable solar energy strategies.
+## Introduction
 
-Showcase version control, collaboration, and CI/CD setup through GitHub workflows.
+Week 0 of the Solar Challenge aimed to explore the solar energy potential across **three West African countries**: Benin, Sierra Leone, and Togo. The objective was to complete a full data science workflow—from gathering and cleaning the raw data, through exploratory analysis and cross-country comparison, to building an interactive visualization dashboard.
 
-⚙️ Setup Instructions
-1️⃣ Clone Repository
-git clone https://github.com/Yenenesh12/solar-challenge-week0.git
+This report presents the workflow and findings in a **storytelling style**, balancing technical rigor with clear, readable narrative.
 
-cd solar-challenge-week0
+---
 
-2️⃣ Create Virtual Environment
-python3 -m venv venv
+## Project Goals
 
-Activate environment
-source venv/bin/activate # (Linux/Mac)
+* Examine solar irradiance and temperature patterns for each country
+* Conduct **country-specific exploratory data analysis (EDA)**
+* Perform **cross-country comparisons** to identify trends and differences
+* Develop an **interactive dashboard** to visualize insights
+* Prepare the data and workflow for potential predictive modeling
 
-venv\Scripts\activate # (Windows)
+---
 
-3️⃣ Install Dependencies
-pip install -r requirements.txt
+## Data Overview
 
-4️⃣ Folder Structure
-solar-challenge-week0/ │ ├── .github/ │ └── workflows/ │ └── ci.yml │ ├── notebooks/ │ ├── benin_eda.ipynb │ ├── togo_eda.ipynb │ ├── sierra_leone_eda.ipynb │ ├── scripts/ │ ├── cleaning.py │ ├── eda_utils.py │ ├── visualization.py │ ├── tests/ │ └── test_cleaning.py │ ├── requirements.txt ├── .gitignore └── README.md
+The datasets included:
 
-📊 Key Performance Indicators (KPIs)
-Category KPI Description
-Environment Setup ✅ Git & venv configured Repository initialized with CI workflow and requirements
+| Country      | Filename               | Records      |
+| ------------ | -------------------- | ----------- |
+| Benin        | benin_clean.csv       | 100,000+    |
+| Sierra Leone | sierra_leone_clean.csv | 100,000+   |
+| Togo         | togo_clean.csv        | 100,000+    |
 
-Version Control ✅ Frequent commits Clear and descriptive commit messages using Git branches
+**Metrics analyzed:**
 
-EDA & Cleaning ✅ Data profiling completed Summary stats, missing values, and outlier detection implemented
+* **GHI (Global Horizontal Irradiance):** Total solar radiation received on a horizontal surface
+* **DNI (Direct Normal Irradiance):** Direct beam radiation
+* **DHI (Diffuse Horizontal Irradiance):** Scattered solar radiation
+* **Temperature:** Ambient temperature readings
 
-Visualization & Insights ✅ Meaningful plots Clear time-series, correlation heatmaps, and trend visualizations
+---
 
-Documentation ✅ Professional README Steps to reproduce, objectives, and structure well explained
+## Workflow Overview
 
-Proactivity ✅ Self-learning & clarity Use of proper statistical and visualization techniques
+### 1. Project Setup
 
-CI/CD Workflow ✅ GitHub Actions setup Automated test or installation pipeline included
+* Initialized the **GitHub repository** and Python environment
+* Installed required packages via `requirements.txt`
+* Configured a **CI/CD workflow** using GitHub Actions
+* Structured directories for notebooks, scripts, data, and the Streamlit app
 
-🧩 Tools & Technologies
-Python (Pandas, NumPy, Matplotlib, Seaborn)
+---
 
-Git & GitHub
+### 2. Country-Level Exploratory Data Analysis
 
-CI/CD using GitHub Actions
+#### Benin
 
-Streamlit (for dashboard creation)
+* **Data Cleaning:** Imputed missing values using median
+* **Outlier Detection:** Applied Z-score method
+* **Visualization:** Time series plots for GHI, DNI, DHI, and temperature
+* **Insights:** Northern regions show the highest solar potential; seasonal patterns are evident
 
-Jupyter Notebooks
+#### Sierra Leone
 
-🧾 Author
-Yenenesh Dabot
+* **Statistical Analysis:** Computed mean, median, and standard deviation
+* **Visualization:** Boxplots and distribution plots for solar metrics
+* **Insights:** Coastal regions have higher diffuse radiation, while inland areas show stronger direct irradiance
 
-📧 [yeneshdabot2022@gmail.com]
+#### Togo
 
-🔗 GitHub Profile
+* **Time Series Analysis:** Seasonal decomposition and trend visualization
+* **Correlation Study:** Strong relationship observed between GHI and temperature
+* **Insights:** Southern regions experience stable solar exposure, while northern areas show higher variability
+
+---
+
+### 3. Cross-Country Comparison
+
+* **Comparative Metrics:** Analyzed mean, median, and variance across the three countries
+* **Regional Patterns:** Northern Benin and Togo show similar GHI trends; Sierra Leone demonstrates coastal-inland differences
+* **Benchmarking:** Highlighted top-performing regions for potential solar energy deployment
+
+---
+
+### 4. Interactive Dashboard
+
+* Developed using **Streamlit**
+* Key Features:
+
+  * Filter data by country and metric
+  * Interactive boxplots and time series charts
+  * Export charts for reporting purposes
+
+* Run the dashboard locally:
+```bash
+streamlit run app/main.py
+
+
+| Component                | Status | Description                         |
+| ------------------------ | ------ | ----------------------------------- |
+| Benin EDA                | ✅      | Completed                           |
+| Sierra Leone EDA         | ✅      | Completed                           |
+| Togo EDA                 | ✅      | Completed                           |
+| Cross-Country Comparison | ✅      | Completed                           |
+| Streamlit Dashboard      | ⏳      | Interactive visualizations deployed |
+
+###  Key Takeaways
+Data quality is essential: Proper cleaning and validation improved analysis accuracy
+
+Visualization clarifies patterns: Trends and anomalies became immediately visible
+
+Automation improves reproducibility: Structured workflow and CI/CD pipelines enhanced consistency
+
+Collaboration benefits: Git branching strategies allowed parallel work without conflicts
+
+### Conclusion
+Week 0 laid the groundwork for the Solar Challenge by providing cleaned datasets, actionable insights on solar energy potential, and a functional interactive dashboard. This work establishes a solid foundation for future predictive modeling and optimization tasks.
+
+### Tools & References
+Python 3.12, Pandas, NumPy, Matplotlib, Seaborn
+
+Streamlit for interactive dashboards
+
+GitHub Actions for CI/CD workflow
+
+Made with ❤️ by Yenenesh Dabot
