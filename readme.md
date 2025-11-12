@@ -83,6 +83,7 @@ The datasets included:
 
 ---
 
+
 ### 4. Interactive Dashboard
 
 * Developed using **Streamlit**
@@ -95,8 +96,8 @@ The datasets included:
 * Run the dashboard locally:
 ```bash
 streamlit run app/main.py
-
-
+```
+### Key Deliverables
 | Component                | Status | Description                         |
 | ------------------------ | ------ | ----------------------------------- |
 | Benin EDA                | ✅      | Completed                           |
@@ -124,4 +125,4 @@ Streamlit for interactive dashboards
 
 GitHub Actions for CI/CD workflow
 
-Made with ❤️ by Yenenesh Dabot
+Made with  by Yenenesh Dabot
