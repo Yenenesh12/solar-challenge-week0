@@ -97,6 +97,8 @@ The datasets included:
 ```bash
 streamlit run app/main.py
 ```
+Available online: [Open Interactive Dashboard](https://solar-challenge-week0-kcdtccqpmmyrqtuwjfsa3s.streamlit.app/){:target="_blank"}
+
 ### Key Deliverables
 | Component                | Status | Description                         |
 | ------------------------ | ------ | ----------------------------------- |
